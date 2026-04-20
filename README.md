@@ -21,7 +21,8 @@ This project demonstrates how to build a scalable, event-driven data pipeline on
 ---
 ## 🏗️ Architecture Overview
 
-🔹 High-Level Workflow
+🔹 High-Level Workflow: 
+
 1️⃣ Upload CSV file to csv-raw-data bucket
 
 2️⃣ S3 event triggers AWS Lambda
@@ -143,19 +144,28 @@ Ensure proper IAM roles:
 
 ## 🧠 Key Features
 ✅ Fully serverless architecture
+
 ✅ Event-driven processing
+
 ✅ Scalable and cost-efficient
+
 ✅ Automated ETL pipeline
+
 ✅ Real-time data visualization
 
 ---
 
 ## 🎯 Learning Outcomes
 ● Hands-on with AWS core services (S3, Lambda, Glue)
+
 ● Understanding of ETL pipelines
+
 ● Experience with event-driven architecture
+
 ● Data visualization using QuickSight
+
 ● IAM roles and permissions management
+
 
 
 ---
