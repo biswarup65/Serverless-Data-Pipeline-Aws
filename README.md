@@ -7,10 +7,15 @@
 This project demonstrates how to build a scalable, event-driven data pipeline on AWS.
 
 ● CSV files are uploaded to an S3 raw bucket 
+
 ● An AWS Lambda function is triggered automatically 
+
 ● Data is cleaned and stored in a processed S3 bucket 
+
 ● AWS Glue performs ETL operations 
+
 ● Final data is stored in a final S3 bucket 
+
 ● Amazon QuickSight is used for data visualization 
 
 ---
@@ -18,11 +23,17 @@ This project demonstrates how to build a scalable, event-driven data pipeline on
 
 🔹 High-Level Workflow
 1️⃣ Upload CSV file to csv-raw-data bucket
+
 2️⃣ S3 event triggers AWS Lambda
+
 3️⃣ Lambda preprocesses and stores data in csv-processed-data
+
 4️⃣ AWS Glue Crawler scans and creates schema
+
 5️⃣ AWS Glue Job transforms data
+
 6️⃣ Output stored in csv-final-data
+
 7️⃣ Amazon QuickSight visualizes data
 
 ---
