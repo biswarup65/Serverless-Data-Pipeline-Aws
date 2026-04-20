@@ -101,42 +101,42 @@ Ensure proper IAM roles:
 
 ## 🗂️ S3 Buckets
 
-## Raw bucket (csv-raw-data)
+## ● Raw bucket (csv-raw-data)
 ![Raw bucket]()
 
-## Raw bucket (csv-raw-data)
-![Raw bucket]()
+## ● Processed bucket (csv-processed-data)
+![Processed bucket]()
 
-## Processed bucket (csv-processed-data)
-![Processed]()
+## ● Final bucket (csv-final-data)
+![Final bucket]()
 
 ---
 
 ## ⚡Lambda
 
-## Lambda function configuration
+## ● Lambda function configuration
 ![Lambda function configuration]()
 
-## Execution logs (CloudWatch)
+## ● Execution logs (CloudWatch)
 ![Execution logs]()
 
 ---
 
 ## 🔄 AWS Glue
 
-## Glue Crawler configuration
+## ● Glue Crawler configuration
 ![Glue Crawler configuration]()
 
-## Glue Data Catalog tables
+## ● Glue Data Catalog tables
 ![Glue Data Catalog tables]()
 
-## Glue ETL Job run details
+## ● Glue ETL Job run details
 ![Glue ETL Job run details]()
 ---
 
 ## 📊 QuickSight
 
-## Dashboard visualization
+## ● Dashboard visualization
 ![Dashboard visualization]()
 
 ---
@@ -170,10 +170,11 @@ Ensure proper IAM roles:
 
 ---
 
-## 🏁 Conclusion
+## 📌 Conclusion
 
-This project demonstrates a production-style AWS infrastructure focused on availability, scalability, monitoring, and security.
-It reflects real-world cloud support responsibilities and provides a strong foundation in Cloud Infrastructure.
+This project demonstrates how to build a fully serverless, scalable, and event-driven data pipeline on AWS using S3, Lambda, AWS Glue, and QuickSight. It highlights the practical implementation of data ingestion, transformation, and visualization in a real-world scenario.
+
+By completing this project, you gain hands-on experience with core AWS services, understand ETL workflows, and learn how to design efficient cloud-based data solutions.
 
 ---
 
