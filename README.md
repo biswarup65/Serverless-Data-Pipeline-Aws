@@ -6,24 +6,24 @@
 
 This project demonstrates how to build a scalable, event-driven data pipeline on AWS.
 
-CSV files are uploaded to an S3 raw bucket
-An AWS Lambda function is triggered automatically
-Data is cleaned and stored in a processed S3 bucket
-AWS Glue performs ETL operations
-Final data is stored in a final S3 bucket
-Amazon QuickSight is used for data visualization
+● CSV files are uploaded to an S3 raw bucket
+● An AWS Lambda function is triggered automatically
+● Data is cleaned and stored in a processed S3 bucket
+● AWS Glue performs ETL operations
+● Final data is stored in a final S3 bucket
+● Amazon QuickSight is used for data visualization
 
 ---
 ## 🏗️ Architecture Overview
 
 🔹 High-Level Workflow
-Upload CSV file to csv-raw-data bucket
-S3 event triggers AWS Lambda
-Lambda preprocesses and stores data in csv-processed-data
-AWS Glue Crawler scans and creates schema
-AWS Glue Job transforms data
-Output stored in csv-final-data
-Amazon QuickSight visualizes data
+1️⃣ Upload CSV file to csv-raw-data bucket
+2️⃣ S3 event triggers AWS Lambda
+3️⃣ Lambda preprocesses and stores data in csv-processed-data
+4️⃣ AWS Glue Crawler scans and creates schema
+5️⃣ AWS Glue Job transforms data
+6️⃣ Output stored in csv-final-data
+7️⃣ Amazon QuickSight visualizes data
 
 ---
 
@@ -45,11 +45,19 @@ Amazon QuickSight visualizes data
 
 ## 1️⃣ Create S3 Buckets
 ``` bash
-● csv-raw-data
-● csv-processed-data
-● csv-final-data
+ ● csv-raw-data
+ ● csv-processed-data
+ ● csv-final-data
 ```
-## 2️⃣ Configure AWS Lambda
+## 2️⃣ IAM Permissions 
+``` bash
+Ensure proper IAM roles:
+ • Lambda → S3 access
+ • Glue → S3 + Catalog access
+ • QuickSight → S3/Glue access
+```
+
+## 3️⃣ Configure AWS Lambda
 ``` bash
 ● Runtime: Python 3.x
 ● Trigger: S3 (on object upload)
@@ -58,7 +66,7 @@ Amazon QuickSight visualizes data
    ● Clean/transform data
    ● Save to processed bucket
 ```
-## 3️⃣ Setup AWS Glue
+## 4️⃣ Setup AWS Glue
 ``` bash
 ✔️ Crawler
    ● Source: csv-processed-data
@@ -68,11 +76,11 @@ Amazon QuickSight visualizes data
     ● Transform data
     ● Output: csv-final-data
 ``` 
-## 4️⃣ Configure Amazon QuickSight
+## 5️⃣ Configure Amazon QuickSight
 ``` bash
-● Connect to Glue Data Catalog / S3
-● Create dataset
-● Build dashboard
+ ● Connect to Glue Data Catalog / S3
+ ● Create dataset
+ ● Build dashboard
 ``` 
 ---
 
@@ -80,83 +88,63 @@ Amazon QuickSight visualizes data
 
 
 ## 🗂️ S3 Buckets
-![VPC Dashboard](https://github.com/biswarup65/Netflix-WebApp-Aws/blob/main/screenshots/vpc-dashboard.png)
+
+## Raw bucket (csv-raw-data)
+![Raw bucket]()
+
+## Raw bucket (csv-raw-data)
+![Raw bucket]()
+
+## Processed bucket (csv-processed-data)
+![Processed]()
 
 ---
 
-## 📊 ALB Overview Page
-![ALB Overview](https://github.com/biswarup65/Netflix-WebApp-Aws/blob/main/screenshots/alb-overview.png)
+## ⚡Lambda
+
+## Lambda function configuration
+![Lambda function configuration]()
+
+## Execution logs (CloudWatch)
+![Execution logs]()
 
 ---
 
-## 📊 Target Group – Healthy Targets
+## 🔄 AWS Glue
 
-![TG](https://github.com/biswarup65/Netflix-WebApp-Aws/blob/main/screenshots/target-group-healthy-instances.png)
+## Glue Crawler configuration
+![Glue Crawler configuration]()
 
----
-## 📊 Auto Scaling Group – Activity History
+## Glue Data Catalog tables
+![Glue Data Catalog tables]()
 
-
-![Auto Scaling Group – Activity](https://github.com/biswarup65/Netflix-WebApp-Aws/blob/main/screenshots/asg-scaling-activity-history.png)
-
----
-
-## 📊 CloudWatch CPU Utilization Graph
-![CloudWatch CPU Utilization Graph](https://github.com/biswarup65/Netflix-WebApp-Aws/blob/main/screenshots/cpu-utlization-graph-cw.png)
-
+## Glue ETL Job run details
+![Glue ETL Job run details]()
 ---
 
-## 📊 CloudWatch Target tracking RequestCountPerTarget Graph 
+## 📊 QuickSight
 
-![CloudWatch Target tracking RequestCountPerTarget Graph](https://github.com/biswarup65/Netflix-WebApp-Aws/blob/main/screenshots/Target-tracking-scaling-cloudwatch-alarm-graph.png)
-
-## 📊 CloudWatch UnHealthyHostCount Alarm
-![CloudWatch UnHealthyHostCount Graph](https://github.com/biswarup65/Netflix-WebApp-Aws/blob/main/screenshots/unhealthy-host-count-cloudwatch-graph.png)
-
----
-![CloudWatch UnHealthyHostCount Alert](https://github.com/biswarup65/Netflix-WebApp-Aws/blob/main/screenshots/unhealthy-hostcount-alert-via-cloudwatch-alarm.png)
+## Dashboard visualization
+![Dashboard visualization]()
 
 ---
 
-## 📊 Scaling Policy (RequestCountPerTarget)
-![Scaling Policy - (RequestCountPerTarget)](https://github.com/biswarup65/Netflix-WebApp-Aws/blob/main/screenshots/asg-target-tracking-policy.png)
+
+## 🧠 Key Features
+✅ Fully serverless architecture
+✅ Event-driven processing
+✅ Scalable and cost-efficient
+✅ Automated ETL pipeline
+✅ Real-time data visualization
 
 ---
 
-## 📊 EC2 Instances List (Multiple Instances Running)
-![ EC2 Instances](https://github.com/biswarup65/Netflix-WebApp-Aws/blob/main/screenshots/ec2-instances-multiples.png)
-
----
-
-## 🌐 Application Preview (Deployed)
-![ Netflix Web app](https://github.com/biswarup65/Netflix-WebApp-Aws/blob/main/screenshots/application-view-1.png)
-
----
-![ Netflix Web app-features](https://github.com/biswarup65/Netflix-WebApp-Aws/blob/main/screenshots/application-view-2.png)
-
----
-
-## 🧪 Testing & Validation
-
-● Verified traffic distribution across EC2 instances
-
-● Simulated instance failure and observed auto-healing
-
-● Generated load to trigger auto scaling
-
-● Confirmed CloudWatch alarms and scaling behavior
-
----
-
-## 📈 Learning Outcomes
-
-➤ Hands-on experience with highly available cloud architecture
-
-➤ Practical understanding of monitoring and alerting
-
-➤ Learned real-world troubleshooting scenarios
-
-➤ Gained exposure to AWS best practices for operations
+## 🎯 Learning Outcomes
+● Hands-on with AWS core services (S3, Lambda, Glue)
+● Understanding of ETL pipelines
+● Experience with event-driven architecture
+● Data visualization using QuickSight
+● IAM roles and permissions management
 
 
 ---
@@ -167,13 +155,7 @@ This project demonstrates a production-style AWS infrastructure focused on avail
 It reflects real-world cloud support responsibilities and provides a strong foundation in Cloud Infrastructure.
 
 ---
-## References
 
-- AWS Documentation: VPC with servers in private subnets and NAT gateway  
-  https://docs.aws.amazon.com/vpc/latest/userguide/vpc-example-private-subnets-nat.html
-
-- AWS Documentation: VPC for Web and Database servers 
-  https://docs.aws.amazon.com/vpc/latest/userguide/vpc-example-web-database-servers.html
 
 
 
