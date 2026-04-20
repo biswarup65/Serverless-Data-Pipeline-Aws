@@ -1,6 +1,6 @@
 # 📊 Data Pipeline for Processing CSV Files on AWS
 
-![Project Banner]()
+![Project Banner](https://github.com/biswarup65/Serverless-Data-Pipeline-Aws/blob/main/screenshots/serverless-csv-data-pipeline-arch-diagram.png)
 
 ## 🚀 Project Overview
 
