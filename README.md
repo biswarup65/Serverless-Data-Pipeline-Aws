@@ -102,42 +102,47 @@ Ensure proper IAM roles:
 ## 🗂️ S3 Buckets
 
 ## ● Raw bucket (csv-raw-data)
-![Raw bucket]()
+![Raw bucket](https://github.com/biswarup65/Serverless-Data-Pipeline-Aws/blob/main/screenshots/Screenshot%202026-04-20%20173505.png)
 
 ## ● Processed bucket (csv-processed-data)
-![Processed bucket]()
+![Processed bucket](https://github.com/biswarup65/Serverless-Data-Pipeline-Aws/blob/main/screenshots/Screenshot%202026-04-20%20173531.png)
 
 ## ● Final bucket (csv-final-data)
-![Final bucket]()
+![Final bucket](https://github.com/biswarup65/Serverless-Data-Pipeline-Aws/blob/main/screenshots/Screenshot%202026-04-20%20173556.png)
 
 ---
 
 ## ⚡Lambda
 
 ## ● Lambda function configuration
-![Lambda function configuration]()
+![Lambda function configuration](https://github.com/biswarup65/Serverless-Data-Pipeline-Aws/blob/main/screenshots/Screenshot%202026-04-20%20173812.png)
 
-## ● Execution logs (CloudWatch)
-![Execution logs]()
+
 
 ---
 
 ## 🔄 AWS Glue
 
 ## ● Glue Crawler configuration
-![Glue Crawler configuration]()
+![Glue Crawler configuration](https://github.com/biswarup65/Serverless-Data-Pipeline-Aws/blob/main/screenshots/Screenshot%202026-04-20%20174520.png)
 
 ## ● Glue Data Catalog tables
-![Glue Data Catalog tables]()
+![Glue Data Catalog tables](https://github.com/biswarup65/Serverless-Data-Pipeline-Aws/blob/main/screenshots/Screenshot%202026-04-20%20174623.png)
 
 ## ● Glue ETL Job run details
-![Glue ETL Job run details]()
+![Glue ETL Job run details](https://github.com/biswarup65/Serverless-Data-Pipeline-Aws/blob/main/screenshots/Screenshot%202026-04-20%20175059.png)
+
+![Glue ETL Job run details](https://github.com/biswarup65/Serverless-Data-Pipeline-Aws/blob/main/screenshots/Screenshot%202026-04-20%20175820.png)
 ---
 
 ## 📊 QuickSight
 
 ## ● Dashboard visualization
-![Dashboard visualization]()
+![Dashboard visualization-1](https://github.com/biswarup65/Serverless-Data-Pipeline-Aws/blob/main/screenshots/Screenshot%202026-04-20%20190453.png)
+
+![Dashboard visualization-2](https://github.com/biswarup65/Serverless-Data-Pipeline-Aws/blob/main/screenshots/Screenshot%202026-04-20%20190541.png)
+
+
 
 ---
 
